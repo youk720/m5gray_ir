@@ -11,8 +11,8 @@ M5Stack GRAYで赤外線操作をするリポジトリ
 ・https://wak-tech.com/archives/1627
 ・https://iot-gym.com/how-to-receive-ir-signals-by-using-m5atom/
 ・
-・
-・
+・https://github.com/m5stack/m5-docs/blob/master/docs/ja/api/lcd.md (M5Stack各種UI)
+・https://crankyoldgit.github.io/IRremoteESP8266/doxygen/html/classdecode__results.html(esp8266赤外線データの保管変数)
 ・
 ・
 ・
