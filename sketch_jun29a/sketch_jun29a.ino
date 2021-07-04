@@ -51,9 +51,15 @@ const uint16_t kRecvPin = 36; //受信ピン(ADC対応)
 const uint16_t kCaptureBufferSize = 1024;
 const uint8_t kTimeout = 50;
 IRrecv irrecv(kRecvPin, kCaptureBufferSize, kTimeout, true);
+int lcd_results = 0;
+int cursor_y = 0;
 
 void setup() {
   // put your setup code here, to run once:
+  M5.begin();
+  M5.Power.begin();
+  
+  M5.Lcd.setTextSize(2);
   Serial.begin(115200);
   delay(50);
 
@@ -65,6 +71,19 @@ void loop() {
   // put your main code here, to run repeatedly:
   decode_results results;
   if(irrecv.decode(&results)){
+    //   入力値出力
+    //   M5Stack画面内リセット処理
+    if(lcd_results >= 14 && lcd_results != 28){
+      M5.Lcd.setCursor(150, cursor_y);
+      cursor_y = cursor_y + 15;
+    }else if(lcd_results == 28){
+      M5.Lcd.fillScreen(BLACK);
+      M5.Lcd.setCursor(0, 0);
+      lcd_results = 0;
+      cursor_y = 0;
+    }
+    M5.Lcd.printf("%d\n", results.command);
+    lcd_results++;
     Serial.println(results.command);
     }
     delay(50);
