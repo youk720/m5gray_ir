@@ -8,5 +8,13 @@ M5Stack GRAYで赤外線操作をするリポジトリ
 ・https://lang-ship.com/blog/work/m5stack-ir-unit/
 ・https://qiita.com/nnn112358/items/2f5d33b474e844a09ac3
 ・https://qiita.com/taka-murakami/items/a3c05115d5a5038ebb11
+・https://wak-tech.com/archives/1627
+・https://iot-gym.com/how-to-receive-ir-signals-by-using-m5atom/
+・
+・
+・
+・
+・
+・
 ・
 ・
