@@ -56,10 +56,11 @@ int cursor_y = 0;
 
 void setup() {
   // put your setup code here, to run once:
+//  M5Stack画面初期設定
   M5.begin();
   M5.Power.begin();
-  
   M5.Lcd.setTextSize(2);
+  
   Serial.begin(115200);
   delay(50);
 
