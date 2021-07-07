@@ -179,10 +179,6 @@ void loop() {
     Serial.println(resultToSourceCode(&results));
     Serial.println();    // Blank line between entries
     //   M5Stack画面内リセット処理
-//    if(lcd_results >= 14 && lcd_results != 28){
-//      M5.Lcd.setCursor(150, cursor_y);
-//      cursor_y = cursor_y + 15;
-//    }else 
     if(lcd_results == 14/*28*/){
       M5.Lcd.fillScreen(BLACK);
       M5.Lcd.setCursor(0, 0);
